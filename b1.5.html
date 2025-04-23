@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Method và Property</title>
+</head>
+<body>
+
+  <p id="demo">Đây là nội dung ban đầu.</p>
+  <button onclick="thayDoiNoiDung()">Thay đổi nội dung</button>
+
+  <script>
+    function thayDoiNoiDung() {
+      // getElementById là phương thức (method) - hành động để lấy phần tử
+      // innerHTML là thuộc tính (property) - giá trị của phần tử đó
+      document.getElementById("demo").innerHTML = "Nội dung đã được thay đổi!";
+    }
+  </script>
+
+</body>
+</html>

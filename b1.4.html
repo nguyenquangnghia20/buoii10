@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quản lý Node</title>
+  <style>
+    #container {
+      border: 1px solid #aaa;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    button {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Quản lý Node bằng JavaScript</h2>
+  <div id="controls">
+    <button onclick="addImage()">Thêm ảnh</button>
+    <button onclick="addNodeAt()">Thêm node ở vị trí 1</button>
+    <button onclick="replaceNode()">Thay thế node đầu</button>
+    <button onclick="removeNode()">Xóa node cuối</button>
+    <button onclick="changeContent()">Thay đổi nội dung</button>
+  </div>
+
+  <div id="container">
+    <p>Đây là đoạn văn bản ban đầu.</p>
+  </div>
+
+  <script>
+    const container = document.getElementById('container');
+
+    function addImage() {
+      const img = document.createElement('img');
+      img.src = 'https://via.placeholder.com/150';
+      img.alt = 'Ảnh mẫu';
+      container.appendChild(img);
+    }
+
+    function addNodeAt() {
+      const newNode = document.createElement('div');
+      newNode.textContent = 'Node mới được thêm vào vị trí 1';
+      container.insertBefore(newNode, container.children[1] || null);
+    }
+
+    function replaceNode() {
+      if (container.firstChild) {
+        const newNode = document.createElement('p');
+        newNode.textContent = 'Node này đã thay thế node đầu tiên.';
+        container.replaceChild(newNode, container.firstChild);
+      }
+    }
+
+    function removeNode() {
+      if (container.lastChild) {
+        container.removeChild(container.lastChild);
+      }
+    }
+
+    function changeContent() {
+      if (container.firstChild) {
+        container.firstChild.textContent = 'Nội dung đã được thay đổi.';
+      }
+    }
+  </script>
+</body>
+</html>

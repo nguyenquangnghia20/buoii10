@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Cá Nhân</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 80px 10px;
+            transition: padding 0.3s ease;
+        }
+        header h1 {
+            font-size: 35px;
+            transition: font-size 0.3s ease;
+        }
+        nav {
+            background: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline-block;
+            position: relative;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+        nav ul li:hover .dropdown {
+            display: block;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            background: #555;
+            min-width: 150px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .dropdown a {
+            display: block;
+            padding: 10px;
+            text-align: left;
+            color: white;
+            text-decoration: none;
+        }
+        .sidebar {
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 200px;
+            background-color: #333;
+            color: white;
+            height: 100%;
+            padding-top: 20px;
+            display: none;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+        }
+        .sidebar ul li a:hover {
+            background-color: #555;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .avatar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .avatar img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #444;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+        .home-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #434648;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .home-button:hover {
+            background-color: #56595c;
+        }
+        @media (min-width: 768px) {
+            .sidebar {
+                display: block;
+            }
+            .container {
+                margin-left: 220px;
+                max-width: calc(100% - 240px);
+            }
+        }
+        @media (max-width: 767px) {
+            nav ul li {
+                display: block;
+                text-align: left;
+            }
+            .dropdown {
+                position: static;
+            }
+            .avatar img {
+                width: 100px;
+                height: 100px;
+            }
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="navbar">
+        <h1 id="logo">Chào mừng đến với trang web cá nhân</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Dịch vụ</a></li>
+            <li>
+                <a href="#">Thông tin &#9662;</a>
+                <ul class="dropdown">
+                    <li><a href="#">Học vấn</a></li>
+                    <li><a href="#">Sở thích</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Liên hệ &#9662;</a>
+                <ul class="dropdown">
+                    <li><a href="mailto:lillaby20506@gmail.com">Gmail</a></li>
+                    <li><a href="https://www.facebook.com/lucy.linh.589" target="_blank">Facebook</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <aside class="sidebar">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </aside>
+    <div class="container">
+        <div class="avatar">
+            <img src="https://kenh14cdn.com/2020/6/1/minn-15909828880311452228866.jpeg" alt="Ảnh đại diện">
+        </div>
+        <h2>Nguyễn Quang Nghĩa</h2>
+        <p><strong>Ngành:</strong> CNTT D2024A</p>
+        <p><strong>Điện thoại:</strong> 0368170661</p>
+        <p><strong>Email:</strong> lillaby20506@gmail.com</p>
+        <h2>Học Vấn</h2>
+        <p><strong>Trường:</strong> Đại học Thủ đô Hà Nội</p>
+        <p><strong>Khoa:</strong> Công nghệ thông tin</p>
+        <h2>Sở thích</h2>
+        <ul>
+            <li>Thích nghe nhạc, ngủ, game</li>
+            <li>Thích ăn vặt</li>
+            <li>Thích xem phim</li>
+        </ul>
+    </div>
+    <footer>
+        <p> Nguyen Quang Nghia.</p>
+    </footer>
+    <a href="#top" class="home-button">Quay về Đầu Trang</a>
+    <script>
+        // Hiệu ứng cuộn cho navbar và tiêu đề
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            const logo = document.getElementById('logo');
+            if (window.scrollY > 80) {
+                navbar.style.padding = '30px 10px';
+                logo.style.fontSize = '25px';
+            } else {
+                navbar.style.padding = '80px 10px';
+                logo.style.fontSize = '35px';
+            }
+        });
+    </script>
+</body>
+</html>
